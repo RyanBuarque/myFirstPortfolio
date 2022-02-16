@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    font-family: 'Varela Round', sans-serif;
+    color: whitesmoke;
+}
+header{
+    line-height: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid white;
+    padding: 30px;
+    align-items: center;
+}
+img{
+    margin: 1rem 0 1rem;
+    transform: rotate(35deg);
+}
+img:hover{
+    transform: rotate(-325deg);
+    transition: 2s;
+}
+body{
+    background-image: linear-gradient(45deg, #05093a, #2e0000);
+    /* height: 100vh; */
+}
+footer{
+    text-align: end;
+    margin-right: 8%;
+}
+footer a{
+    background-color: white;
+    padding: 10px;
+    border-radius: 100px;
+    color: #2e0000;
+    margin-right: 2rem;
+}
+footer i{
+    margin-right: 5px;
+    font-size: 1.5rem;
+    color: #05093a;
+}
+footer a:hover{
+    background-color: #05093a;
+    opacity: 70%;
+    color: white;
+    transition: 0.5s;
+}
+footer a:hover i::before{
+    color: white;
+}
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+a:hover{
+    color: red;
+    transition: 0.5s;
+}
+a:hover i::before{
+    color: red;
+    transition: 0.5s;
+}
+.menu i{
+    margin-right: 5px;
+}
+.menu a{
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+.teste{
+    margin: 3rem;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 40vh;
+    background-color: white;
+    left: 50%;
+    transform: translate(-55%);
+    
+  }
+  section h1, section h2{
+    color: #2e0000;
+  }
+  @media (max-width: 414px){
+      header {
+          background-color: red;
+          width: 100%;
+      }
+  }
