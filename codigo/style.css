@@ -4,6 +4,7 @@
     font-family: 'Varela Round', sans-serif;
     color: whitesmoke;
 }
+
 header{
     line-height: 80%;
     display: flex;
@@ -12,22 +13,48 @@ header{
     padding: 30px;
     align-items: center;
 }
-img{
-    margin: 1rem 0 1rem;
-    transform: rotate(35deg);
+
+@keyframes cursor{
+    from{
+        border-right-color: #2e0000;
+    }
+    to{
+        border-right-color: transparent;
+    }
 }
-img:hover{
-    transform: rotate(-325deg);
-    transition: 2s;
+
+@keyframes text{
+    from{
+        width: 0;
+    }
+    to{
+        width: 8.5em;
+    }
 }
+
 body{
     background-image: linear-gradient(45deg, #05093a, #2e0000);
-    /* height: 100vh; */
 }
+
 footer{
-    text-align: end;
-    margin-right: 8%;
+    margin: 150px 0 0 0;
+    text-align: center;
+    border-radius: 30px;
+    white-space: nowrap;
+
 }
+
+.contats {
+    margin-bottom: 5%;
+}
+
+footer h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 5rem;
+    color: white;
+}
+
 footer a{
     background-color: white;
     padding: 10px;
@@ -35,61 +62,185 @@ footer a{
     color: #2e0000;
     margin-right: 2rem;
 }
+
 footer i{
     margin-right: 5px;
     font-size: 1.5rem;
     color: #05093a;
 }
+
 footer a:hover{
     background-color: #05093a;
     opacity: 70%;
     color: white;
     transition: 0.5s;
 }
+
 footer a:hover i::before{
     color: white;
 }
+
 a{
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px;
 }
+
 a:hover{
-    color: red;
+    color: rgb(192, 17, 177);
     transition: 0.5s;
 }
+
 a:hover i::before{
-    color: red;
+    color: rgb(192, 17, 177);
     transition: 0.5s;
 }
+
 .menu i{
     margin-right: 5px;
 }
+
 .menu a{
     font-size: 1.5rem;
     margin-left: 1.5rem;
 }
-.teste{
-    margin: 3rem;
+
+.teste img{
+    background-color: #2e0000;
+    border: solid 10px #2e000005;
+    box-shadow: 0px 5px 20px #2e0000;
+    border-radius: 50%;
+}
+
+.teste{ 
+    margin: 150px;
     border-radius: 30px;
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    width: 70%;
-    height: 40vh;
+    min-width: 50em;
+    max-width: 55em;
+    height: 20em;
     background-color: white;
     left: 50%;
-    transform: translate(-55%);
-    
-  }
-  section h1, section h2{
+    transform: translate(-70%);  
+    white-space: nowrap;
+    overflow: hidden;  
+}
+
+section h1, section h2{
     color: #2e0000;
-  }
-  @media (max-width: 414px){
-      header {
-          background-color: red;
-          width: 100%;
-      }
-  }
+}
+
+section h1{
+font-size: 4rem;
+white-space: nowrap;
+overflow: hidden;
+margin: 0;
+border-right: 3px solid;
+animation: cursor 500ms steps(40) infinite normal, text 3s steps(40) 1s normal both;
+}
+
+section h2{
+    position: fixed;
+font-size: 2rem;
+align-self: flex-end;  
+}
+
+footer img{
+    position: absolute;
+    transform: translate(58px, -90px);
+    opacity: 0%;
+}
+
+footer img:hover{
+    animation-name: easterEggA;
+    animation-duration: 4s;
+}
+
+@keyframes easterEggA {
+    0%{
+        opacity: 0%;
+    }
+    25%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 30%;
+    }
+    100%{
+        z-index: -1;
+        opacity: 0%;
+    } 
+}
+
+.title img{
+    margin: 1rem 0 1rem;
+    transform: rotate(35deg);
+}
+
+.title p{
+    position: fixed;
+    top: 9%;
+    left: 8em;
+    height: 0;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.title:hover p{
+    transition: 10s;
+    height: 100%;
+    width: 100%;
+}
+
+.title:hover img{
+    transform: rotate(-325deg);
+    transition: 2s;
+}
+
+.title i{
+    font-size: 1.5rem;  
+    margin-left: 0.5rem;
+    transform: scaleX(-1);
+}
+
+.inf{
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.inf h3{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.inf ul{
+    grid-column: 1;
+    margin: 0 auto 0 auto;
+}
+.colum1 ul li{
+    margin: 35px auto 35px auto;
+}
+
+li ul{
+    list-style: none;
+}
+
+li ul li{
+    font-size: 2rem;
+    margin: 10px 0 10px -40px;
+}
+
+#certificado{
+    grid-column-start: 2;
+}
+#certificado img{
+    width: 90%;
+}
+#certificado ul li{
+    margin-top: 35px;
+}
